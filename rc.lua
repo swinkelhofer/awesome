@@ -9,10 +9,7 @@ require("naughty")
 -- Load Debian menu entries
 require("debian.menu")
 vicious = require("vicious")
-awful.util.spawn_with_shell("xcompmgr -cF &")
 awful.util.spawn_with_shell("xrdb ~/.Xdefaults &")
-awful.util.spawn_with_shell("bash /home/swinkelhofer/.dropbox-dist/dropboxd &")
-awful.util.spawn_with_shell("xscreensaver -no-splash &")
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -295,8 +292,6 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev       ),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext       ),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore),
-    awful.key({},"F12", function () awful.util.spawn("xscreensaver-command -lock") end),
-    awful.key({ modkey,		  }, "F12", function() awful.util.spawn("gksudo -m 'Insert Password:' pm-suspend") end),
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)
@@ -327,7 +322,6 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Return", function () awful.util.spawn(terminal) end),
     awful.key({ modkey,           }, "F6",      function () awful.util.spawn("amixer set Master 110 unmute") end),
     awful.key({ modkey,           }, "F5",      function () awful.util.spawn("amixer set Master 0 mute") end),
-    awful.key({ modkey,           }, "F3",      function () awful.util.spawn("sudo pm-suspend") end),
     awful.key({ modkey,		  }, "Up", function () awful.util.spawn("amixer set Master 1+ 1+" ) end),
     awful.key({ modkey, 	  }, "Down", function () awful.util.spawn("amixer set Master 1- 1-") end),
 
@@ -442,20 +436,6 @@ awful.rules.rules = {
     { rule = { class = "gimp" },
       properties = { floating = true } },
     -- Set Firefox to always map on tags number 2 of screen 1.
-    { rule = { class = "rdesktop" },
-      properties = { tag = tags[1][3] } },
-    { rule = { class = "Firefox" },
-      properties = { tag = tags[1][4] } },
-    { rule = { class = "Thunar" },
-      properties = { tag = tags[1][8] } },
-    { rule = { class = "Chromium" },
-      properties = { tag = tags[1][4] } },
-    { rule = { class = "Thunderbird" },
-      properties = { tag = tags[1][7] } },
-    { rule = {class = "UXTerm"}, 
-      properties = {opacity = 0.7} },
-    { rule = { class = "UXTerm" },
-      properties = { tag = tags[1][1] } },
 }
 -- }}}
 
