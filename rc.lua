@@ -144,18 +144,6 @@ volumewidget = widget({
 volumewidget.bg_align = "middle"
 volumewidget.width = 36
 
-sogowidget = widget({
-    type = 'textbox',
-    name = 'sogowidget'
-})
-sogowidget.bg_align = "middle"
-sogowidget.width = 36
-
-sogo = widget({ type = "textbox", name = "sogo" })
-sogo.bg_image = image(beautiful.mailicon)
-sogo.bg_align = "middle"
-sogo.width = 12
-
 function amixer_volume(format)
    local f = io.popen('amixer get Master')
    local l = f:lines()
@@ -197,17 +185,6 @@ function amixer_mute(format)
    return {v}
 end
 
-function sogo_msg(format)
-  local f = io.popen('openssl s_client -quiet -connect imap.uni-ulm.de:993  < credentials | grep STATUS | sed \"s:* STATUS INBOX (UNSEEN ::g\" | sed \'s:)::\'')
-  local l = f:lines()
-  local v = ''
-  for line in l do
-      v = line
-  end
-  return {v}
-end
-
-vicious.register(sogowidget, sogo_msg, "$1", 60)
 vicious.register(volumewidget, amixer_volume, "$1", 1)
 vicious.register(volumeicon, amixer_mute,
 function (widget, args)
@@ -296,7 +273,7 @@ for s = 1, screen.count() do
             mypromptbox[s],
             layout = awful.widget.layout.horizontal.leftright
         },
-  	mylayoutbox[s],  mytextclock, clockicon, spacer, sogowidget, sogo, spacer,
+  	mylayoutbox[s],  mytextclock, clockicon,  spacer,
 	volumewidget, volumeicon, spacer,
         s == 1 and mysystray or nil,
         mytasklist[s],
@@ -479,8 +456,6 @@ awful.rules.rules = {
       properties = {opacity = 0.7} },
     { rule = { class = "UXTerm" },
       properties = { tag = tags[1][1] } },
-    { rule = { class = "Vlc" },
-      properties = { tag = tags[1][2] } },
 }
 -- }}}
 

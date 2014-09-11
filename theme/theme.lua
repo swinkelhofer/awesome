@@ -89,7 +89,7 @@ theme.titlebar_maximized_button_normal_active = "/usr/share/awesome/themes/defau
 theme.titlebar_maximized_button_focus_active  = "/usr/share/awesome/themes/default/titlebar/maximized_focus_active.png"
 
 -- You can use your own command to set your wallpaper
-theme.wallpaper_cmd = { "awsetbg -f /home/swinkelhofer/.config/awesome/wallpaper.png" }
+theme.wallpaper_cmd = { "awsetbg -f /home/zawiw/.config/awesome/wallpaper.png" }
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = "/usr/share/awesome/themes/default/layouts/fairhw.png"
@@ -107,21 +107,21 @@ theme.layout_dwindle = "/usr/share/awesome/themes/default/layouts/dwindlew.png"
 
 theme.awesome_icon = "/usr/share/awesome/icons/awesome16.png"
 
-theme.memicon = "/home/swinkelhofer/.config/awesome/icons/generic/mem.png"
-theme.cpuicon = "/home/swinkelhofer/.config/awesome/icons/generic/cpu.png"
-theme.batfullicon = "/home/swinkelhofer/.config/awesome/icons/generic/batfull.png"
-theme.batlowicon = "/home/swinkelhofer/.config/awesome/icons/generic/batlow.png"
-theme.batchargeicon = "/home/swinkelhofer/.config/awesome/icons/generic/batcharge.png"
-theme.upicon = "/home/swinkelhofer/.config/awesome/icons/generic/up.png"
-theme.downicon = "/home/swinkelhofer/.config/awesome/icons/generic/down.png"
-theme.vol0icon = "/home/swinkelhofer/.config/awesome/icons/generic/vol0.png"
-theme.vol1icon = "/home/swinkelhofer/.config/awesome/icons/generic/vol1.png"
-theme.vol2icon = "/home/swinkelhofer/.config/awesome/icons/generic/vol2.png"
-theme.ssidicon = "/home/swinkelhofer/.config/awesome/icons/generic/ssid.png"
-theme.clockicon = "/home/swinkelhofer/.config/awesome/icons/generic/clock.png"
-theme.mailicon = "/home/swinkelhofer/.config/awesome/icons/generic/mail.png"
-theme.pkgicon = "/home/swinkelhofer/.config/awesome/icons/generic/pkg.png"
-theme.cloudicon = "/home/swinkelhofer/.config/awesome/icons/generic/cloud.png"
+theme.memicon = "/home/zawiw/.config/awesome/icons/generic/mem.png"
+theme.cpuicon = "/home/zawiw/.config/awesome/icons/generic/cpu.png"
+theme.batfullicon = "/home/zawiw/.config/awesome/icons/generic/batfull.png"
+theme.batlowicon = "/home/zawiw/.config/awesome/icons/generic/batlow.png"
+theme.batchargeicon = "/home/zawiw/.config/awesome/icons/generic/batcharge.png"
+theme.upicon = "/home/zawiw/.config/awesome/icons/generic/up.png"
+theme.downicon = "/home/zawiw/.config/awesome/icons/generic/down.png"
+theme.vol0icon = "/home/zawiw/.config/awesome/icons/generic/vol0.png"
+theme.vol1icon = "/home/zawiw/.config/awesome/icons/generic/vol1.png"
+theme.vol2icon = "/home/zawiw/.config/awesome/icons/generic/vol2.png"
+theme.ssidicon = "/home/zawiw/.config/awesome/icons/generic/ssid.png"
+theme.clockicon = "/home/zawiw/.config/awesome/icons/generic/clock.png"
+theme.mailicon = "/home/zawiw/.config/awesome/icons/generic/mail.png"
+theme.pkgicon = "/home/zawiw/.config/awesome/icons/generic/pkg.png"
+theme.cloudicon = "/home/zawiw/.config/awesome/icons/generic/cloud.png"
 
 return theme
 -- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:encoding=utf-8:textwidth=80
