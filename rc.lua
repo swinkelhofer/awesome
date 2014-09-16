@@ -336,7 +336,8 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1)         end),
     awful.key({ modkey,           }, "space", function () awful.layout.inc(layouts,  1) end),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(layouts, -1) end),
-
+    awful.key({ modkey,	 	  }, "s",     function () awful.util.spawn("vlc") end),
+    awful.key({ modkey,		  }, "s",     function () awful.util.spawn("ssvncviewer -passwd " .. awful.util.getdir("config") .. "/../../passwd -viewonly") end ),
     awful.key({ modkey, "Control" }, "n", awful.client.restore),
 
     -- Prompt
@@ -429,6 +430,16 @@ awful.rules.rules = {
                      focus = true,
                      keys = clientkeys,
                      buttons = clientbuttons } },
+    { rule = { class = "Vlc" },
+      properties = { floating = true },
+      callback = function(c)
+	c:geometry( { width = 300, height = 300, x = 800, y = 20 } )
+      end },
+    { rule = { class = "Ssvnc ssvncviewer" },
+      properties = { floating = true },
+      callback = function(c)
+	c:geometry( { width = 200, height = 100, x = 0, y = 0 } )
+      end },
     { rule = { class = "MPlayer" },
       properties = { floating = true } },
     { rule = { class = "pinentry" },
