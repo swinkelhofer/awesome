@@ -1,5 +1,5 @@
-mkdir ~/.config/awesome
-cp * ~/.config/awesome
+mkdir -p ~/.config/awesome
+cp -r * ~/.config/awesome
 
 echo "What is your username?"
 read username
